@@ -14,15 +14,15 @@ const Layout = ({ children, isAuthenticated, setUser }) => {
         <Link to={"/"}>홈</Link>
         {isAuthenticated ? (
           <>
-            <Link to={"/"}>프로필</Link>
-            <Link to={"/"}>테스트</Link>
-            <Link to={"/"}>테스트 결과 목록</Link>
-            <Link to={"/"}>로그아웃</Link>
+            <Link to={"/profile"}>프로필</Link>
+            <Link to={"/test"}>테스트</Link>
+            <Link to={"/testResult"}>테스트 결과 목록</Link>
+            <button onClick={handleLogout}>로그아웃</button>
           </>
         ) : (
           <div className="flex gap-3">
-            <Link to={"/"}>로그인</Link>
-            <Link to={"/"}>회원가입</Link>
+            <Link to={"/login"}>로그인</Link>
+            <Link to={"/signUp"}>회원가입</Link>
           </div>
         )}
       </nav>
